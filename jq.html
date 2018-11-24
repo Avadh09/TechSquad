@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Default functionality</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/start/jquery-ui.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/start/jquery-ui.css">
+  <link rel="stylesheet" href="contactUs.css"/>
+  <link rel="stylesheet" href="enterTalentPool.css"/>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="dragdrop.css">
+    <script type="text/javascript" src="dragdrop.js"></script>
+  <script type="text/javascript" src="http://localhost:5000/contactUs.js "> </script>
+  <script type="text/javascript" src="./enterTalentPool.js"> </script>
+    <script type="text/javascript" src="./searchJobs.js"> </script>
+  <script type="text/javascript" src="./contactUsReply.js"> </script>
+  <script type="text/javascript" scr="/common.js"></script>
+  <script>
+   $( function() {
+       $( "#tabs" ).tabs();
+     } );
+   </script>
+  </head>
+<body>
+<div>
+    <img src="erecruit_logo.png" class="logo" height='140' width='150'/>
+
+</div>
+<div id="tabs">
+
+
+  <ul>
+    <li><a href="#tabs-1">Join our Talent Pool</a></li>
+    <li><a href="#tabs-2">Search for Jobs</a></li>
+    <li><a href="#tabs-3">Sign up for Job Alerts</a></li>
+  <!--  <li><a href="#tabs-4">Video Interview</a></li> -->
+    <li><a href="#tabs-5">Contact Us</a></li>
+  </ul>
+  <div id="tabs-1">
+    <h2>
+        <span class = "ui-icon ui-icon-contact"></span>
+        Join Our Talent Pool
+    </h2>
+    <form action = "">
+        <fieldset>
+
+            <p>
+            <label>First Name*:</label>
+            <input type = "text"
+                   value = ""
+                   id = "firstName" />
+            </p>
+
+            <p>
+            <label>Middle Name:</label>
+            <input type = "text"
+                   value = ""
+                   id = "middleName" />
+            </p>
+
+            <p>
+            <label>Last Name*:</label>
+            <input type = "text"
+                   value = ""
+                   id = "lastName" />
+            </p>
+
+            <p>
+            <label>Phone number:</label>
+            <input type = "text"
+                   value = "(nnn) nnn-nnnn"
+                   id = "phone" />
+            </p>
+
+            <p>
+            <label>Email address:</label>
+            <input type = "text"
+                   value = "xxxxx@xxxxx.xxx"
+                   id = "email" />
+            </p>
+
+            <p>
+            <label>Academic Level</label>
+
+                   <select name="academic">
+                   <option value="hs">High School</option>
+                   <option value="associate">Associate</option>
+                   <option value="bs">Bachelor</option>
+                   <option value="ms">Masters</option>
+                   <option value="phD">Doctorate</option>
+                   </select>
+            </p>
+
+            <p>
+            <label>Interest type</label>
+                   <select name="jobFamily">
+                   <option value="adm">Administrative</option>
+                   <option value="fin">Finance & Accounting</option>
+                   <option value="int">Intern</option>
+                   <option value="tech">Technical</option>
+                   </select>
+            </p>
+
+            <p>
+            <label>Work experience</label>
+
+                   <select name="years">
+                   <option value="none">None</option>
+                   <option value="1-5">1-5 years</option>
+                   <option value="6-10">6-10 years</option>
+                   <option value=">10">above 10 yearsl</option>
+
+                   </select>
+
+            <p>
+                <label for="date">Date available:</label>
+                <input type="text"
+                       id = "datePicker" />
+            </p>
+
+            <p>
+                <label for="time">Best time to reach:</label>
+                <input type="text"
+                       id = "timePicker" />
+            </p>
+
+            <p>
+            <label>Jobs of Interest*:</label>
+            <input type = "text"
+                   value = ""
+                   id = "interest" />
+            </p>
+            <label>Ok to contact: </label>
+            <input type = "text" id = "checkbox" />
+            
+            <p>
+            <button type = "button"
+                    value = "Enter"
+                    onclick = "validate()">
+                Enter
+            </button>
+          </p>
+        </fieldset>
+    </form>
+  </div>
+  <div id="tabs-2">
+    <p>With eRecruit, a job seeker can search millions of jobs online to find the best job that suits your criteria. These criteria could start from Job Type (Individual Contributor or Management), Job Title, keywords, Location, to a Salary Range. We have many tools that you can use for job search - company reviews from existing employees. eRecruit is optimized for mobile usage, supports 1 click job apply and helps match job seekers with employers. You can  receive jobs you are interested in based on your job search parameters. eRecruit can help match those seeking jobs with  openings that match their skills and location.</p>
+      <h2>Search for Jobs</h2>
+      	<fieldset>
+        	 Location
+			<select id="locId" name="jobLoc">
+                        <option value="San Jose">San Jose</option>
+                        <option value="San Francisco">San Francisco</option>
+                        </select>
+         	 Job Type
+                        <select id="typeId" name="jobType">
+  			<option value="Software Engineer">Software Engineer</option>
+  			<option value="Data Scientist">Data Scientist</option>
+  			<option value="Technical Program Manager">Technical Program Manager</option>
+			</select>
+      		<button class="ui-button ui-widget ui-corner-all" type="button" onclick="doAJAX()">Submit</button>
+     	</fieldset>
+      <div id="output">
+      </div>
+  </div>
+  <div id="tabs-3">
+    <p>eRecruit can notify you by email whenever new jobs that match your criteria get posted. All you have to do is to Sign up for Job Alerts.
+    Signing up for Job Alerts is easy. Just search for your job and save your search and Click on "Create New Alert" for this critieria. This will notify users of current job opportunities that they may be interested in. Candidates can create Job Alerts by searching with job titles, keywords, company names, and locations.
+    </p>
+      <div class="dragMe">
+          Details
+          <div id="myInput">
+              <p id="email">Email
+                  <input type="text" value="user@abc.com"/>
+              </p>
+              <p id="name">Name
+                  <input type="text" value="eRecruitUser"/>
+              </p>
+          </div>
+      </div>
+      <div id="target">
+          Drop your contact form here to Sign Up to get the Job alert
+      </div>
+  </div>
+ <!-- </div>-->
+  <div id="tabs-5">
+
+      <div id = "test">
+        <p>
+        <br>
+        Main Phone: (925) 888-8888<br>
+        <br><br>
+        Support: support@techSquad.com<br>
+        Sales:   sales@techSquad.com<br>
+        Finance: finance@techSquad.com<br>
+        HR:      hr@techSqad.com<br>
+        <br><br>
+        Address: Postbox 1, eRecruite, Pleasanton, CA 94566<br>
+
+        </p>
+    </div>
+      <h2>
+          <span class = "ui-icon ui-icon-contact"></span>
+          Please provide your feedback - Resizable Feedback form
+
+      </h2>
+      <textarea id="resizable" rows="5" cols="20"></textarea>
+  </div>
+</div>
+
+</body>
+</html>

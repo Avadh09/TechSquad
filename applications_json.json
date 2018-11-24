@@ -1,0 +1,47 @@
+[
+  {
+    "Userid": 1,
+    "Job title": "Data Scientist",
+    "Company": "Google",
+    "Location": "Mountain View, CA",
+    "Status": "Submitted",
+    "Date submitted": "11/1/2018",
+    "Resume": "Bla Bla"
+  },
+  {
+    "Userid": 1,
+    "Job title": "React Developer",
+    "Company": "Facebook",
+    "Location": "Palo Alto, CA",
+    "Status": "Rejected",
+    "Date submitted": "10/2/2018",
+    "Resume": "Bla Bla"
+  },
+  {
+    "Userid": 1,
+    "Job title": "Angular Developer",
+    "Company": "Google",
+    "Location": "Mountain View, CA",
+    "Status": "Interview",
+    "Date submitted": "11/5/2018",
+    "Resume": "Bla Bla"
+  },
+  {
+    "Userid": 1,
+    "Job title": "Web Developer",
+    "Company": "Amazon",
+    "Location": "Seattle, WA",
+    "Status": "Rejected",
+    "Date submitted": "10/21/2018",
+    "Resume": "Bla Bla"
+  },
+  {
+    "Userid": 1,
+    "Job title": "Software Engineer",
+    "Company": "Salesforce",
+    "Location": "San Francisco, CA",
+    "Status": "Submitted",
+    "Date submitted": "11/2/2018",
+    "Resume": "Bla Bla"
+  }
+]

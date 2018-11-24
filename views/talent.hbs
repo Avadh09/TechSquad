@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hotel Search</title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300|Open+Sans:700" />
+    <link rel="stylesheet" href="erecruit.css" />
+
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/start/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/start/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+<div class="page">
+
+{{> header}}
+
+<form action = "">
+    <fieldset>
+
+        <p>
+        <label>First Name*:</label>
+        <input type = "text"
+               value = ""
+               id = "firstName" />
+        </p>
+
+        <p>
+        <label>Middle Name:</label>
+        <input type = "text"
+               value = ""
+               id = "middleName" />
+        </p>
+
+        <p>
+        <label>Last Name*:</label>
+        <input type = "text"
+               value = ""
+               id = "lastName" />
+        </p>
+
+        <p>
+        <label>Phone number:</label>
+        <input type = "text"
+               value = "(nnn) nnn-nnnn"
+               id = "phone" />
+        </p>
+
+        <p>
+        <label>Email address:</label>
+        <input type = "text"
+               value = "xxxxx@xxxxx.xxx"
+               id = "email" />
+        </p>
+
+        <p>
+        <label>Academic Level</label>
+
+               <select name="academic">
+               <option value="hs">Highschool</option>
+               <option value="associate">Associate</option>
+               <option value="bs">Batchelor</option>
+               <option value="ms">Master</option>
+               <option value="phD">Doctorate</option>
+               </select>
+        </p>
+
+        <p>
+        <label>Interest type</label>
+               <select name="jobFamily">
+               <option value="adm">Administrative</option>
+               <option value="fin">Finance & Accounting</option>
+               <option value="int">Intern</option>
+               <option value="tech">Technical</option>
+               </select>
+        </p>
+
+        <p>
+        <label>Work experience</label>
+
+               <select name="years">
+               <option value="none">None</option>
+               <option value="1-5">1-5 years</option>
+               <option value="6-10">6-10 years</option>
+               <option value=">10">above 10 yearsl</option>
+
+               </select>
+
+        <p>
+            <label for="date">Date available:</label>
+            <input type="text"
+                   id = "datePicker" />
+        </p>
+
+        <p>
+            <label for="time">Best time to reach:</label>
+            <input type="text"
+                   id = "timePicker" />
+        </p>
+
+        <p>
+        <label>Jobs of Interest*:</label>
+        <input type = "text"
+               value = ""
+               id = "interest" />
+        </p>
+        <label>Ok to contact: </label>
+        <input type = "text" id = "checkbox" />
+
+        <p>
+        <button type = "button"
+                value = "Enter"
+                onclick = "validate()">
+            Enter
+        </button>
+      </p>
+    </fieldset>
+</form>
+
+<!--{{> footer}} -->
+
+
+
+
+
+<!--<p class="logo"><a href="/"><img src="Niraj2.png"  alt="Marianne" /></a></p> -->
+
+
+</div> <!-- end page -->
+
+</body>
+</html>

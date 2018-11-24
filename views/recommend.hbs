@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hotel Search</title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300|Open+Sans:700" />
+    <link rel="stylesheet" href="erecruit.css" />
+
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/start/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/start/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <script type="text/javascript">
+    window.ShowCategories = function()
+    //    function showCategories()
+        {
+            var chooser = document.getElementById("corpChooser");
+            var output  = "<p><strong>You chose:";
+
+            for (i = 0; i < chooser.length; i++) {
+               if (chooser[i].selected) {
+                   output += " " + chooser[i].value;
+                //   sql += " " + chooser[i].value;
+
+
+                if (chooser[i].value == "small") {
+                  document.form1.small.value = "1";
+                }
+
+                if (chooser[i].value == "large") {
+                  document.form1.large.value = "1";
+                }
+
+                if (chooser[i].value == "it_industry") {
+                  document.form1.it_industry.value = "1";
+                }
+
+                if (chooser[i].value == "benefits") {
+                  document.form1.benefits.value = "1";
+                }
+
+                if (chooser[i].value == "daycare") {
+                  document.form1.daycare.value = "1";
+                }
+
+                if (chooser[i].value == "reputation") {
+                  document.form1.reputation.value = "1";
+                }
+
+                if (chooser[i].value == "opportunities") {
+                  document.form1.opportunities.value = "1";
+                }
+
+
+
+              } // end if selected
+            } // end for
+
+        } //end function
+    </script>
+    <script>
+    $(function() {
+      $("#category").selectable();
+    });
+</script>
+    <script type="text/javascript">
+        function showSelection()
+        {
+            var chooser = document.getElementById("corpChooser");
+            var output  = "<p><strong>You selected: ";
+
+            for (i = 0; i < chooser.length; i++) {
+               if (chooser[i].selected) {
+                   output += " " + chooser[i].value;
+               }
+            }
+
+            output += "</strong></p>";
+            document.getElementById("outputDiv").innerHTML = output;
+        }
+    </script>
+
+</head>
+
+
+<body>
+<div class="page">
+
+{{> header}}
+<h1>{{pageTitle}}</h1>
+<h1 class = left >Personalized Company Search</h1>
+    <p class="logo"><a href="/"><img src="jobsearch.png"  alt="Marianne" /></a></p>
+
+{{> footer}}
+
+<div class="sidebar">
+
+
+<form name="form1" id="form1" method='post' onsubmit="return ShowCategories();" action='/get_recommendation'>
+
+  <input type="hidden" name="small" id="small" value=0 />
+  <input type="hidden" name="large" id="large" value=0 />
+  <input type="hidden" name="it_industry" id="it_industry" value=0 />
+  <input type="hidden" name="benefits" id="benefits" value=0 />
+  <input type="hidden" name="daycare" id="daycare" value=0 />
+  <input type="hidden" name="reputation" id="reputation" value=0 />
+  <input type="hidden" name="opportunities" id="opportunities" value=0 />
+
+  <fieldset>
+  <legend>Select what is important</legend>
+  <p>
+      <select id="corpChooser"
+              size = "7" multiple="multiple">
+          <option value="small">Less than 1000 employees</option>
+          <option  value="large">Above 1000 employees</option>
+          <option  value="it_industry">Industry must be IT</option>
+          <option  value="benefits">Excellent benefits</option>
+          <option  value="daycare">Daycare on campus</option>
+          <option  value="reputation">Best company voted by their employees</option>
+          <option  value="opportunities">Career growth/opportunities</option>
+
+      </select>
+      <p>
+
+      <input type = "button"
+                  value = "Show Selections"
+                  onclick="showSelection()" />
+
+       <button type = "submit"
+                  value = "Enter" >
+                            Submit
+       </button>
+    </p>
+  </p>
+</fieldset>
+
+
+    </form>
+
+  <div id = "outputDiv">
+    <p></p>
+  </div>
+
+
+</div> <!-- end sidebar -->
+
+</div> <!-- end page -->
+
+</body>
+</html>

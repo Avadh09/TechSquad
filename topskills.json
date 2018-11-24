@@ -1,0 +1,37 @@
+[
+  {
+    "Company": "Google",
+    "Skill1": "Java",
+    "Value1": 45,
+    "Skill2": "Python",
+    "Value2": 42
+  },
+  {
+    "Company": "Salesforce",
+    "Skill1": "Cloud Computing",
+    "Value1": 46,
+    "Skill2": "Agile",
+    "Value2": 39
+  },
+  {
+    "Company": "Facebook",
+    "Skill1": "Java",
+    "Value1": 46,
+    "Skill2": "Pyton",
+    "Value2": 44
+  },
+  {
+    "Company": "Apple",
+    "Skill1": "Java",
+    "Value1": 27,
+    "Skill2": "Software Development",
+    "Value2": 28
+  },
+  {
+    "Company": "Amazon",
+    "Skill1": "Java",
+    "Value1": 57,
+    "Skill2": "Software Development",
+    "Value2": 45
+  }
+]

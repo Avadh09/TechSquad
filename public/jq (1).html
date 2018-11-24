@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Default functionality</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/start/jquery-ui.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/start/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="contactUs.css"/>
+  <link rel="stylesheet" type="text/css" href="interview.css"/>
+  <link rel="stylesheet" type="text/css" href="enterTalentPool.css"/>
+<!--  <link rel="stylesheet" href="http:/resources/demos/style.css"> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type = "text/javascript" src="contactUs.js"> </script>
+  <script type = "text/javascript" src="interview.js"> </script>
+  <script type = "text/javascript" src="enterTalentPool.js"> </script>
+  <script type = "text/javascript" src="contactUsReply.js"> </script>
+  <script>
+    $( function() {
+      $( "#accordion" ).accordion();
+     } );
+   $( function() {
+       $( "#tabs" ).tabs();
+     } );
+   </script>s
+  </head>
+<body>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Join our Talent Pool</a></li>
+    <li><a href="#tabs-2">Search for Jobs</a></li>
+    <li><a href="#tabs-3">Sign up for Job Alerts</a></li>
+  <!--  <li><a href="#tabs-4">Video Interview</a></li> -->
+    <li><a href="#tabs-5">Contact Us</a></li>
+  </ul>
+  <div id="tabs-1">
+    <h2>
+        <span class = "ui-icon ui-icon-contact"></span>
+        Join Our Talent Pool
+    </h2>
+    <form action = "">
+        <fieldset>
+
+            <p>
+            <label>First Name*:</label>
+            <input type = "text"
+                   value = ""
+                   id = "firstName" />
+            </p>
+
+            <p>
+            <label>Middle Name:</label>
+            <input type = "text"
+                   value = ""
+                   id = "middleName" />
+            </p>
+
+            <p>
+            <label>Last Name*:</label>
+            <input type = "text"
+                   value = ""
+                   id = "lastName" />
+            </p>
+
+            <p>
+            <label>Phone number:</label>
+            <input type = "text"
+                   value = "(nnn) nnn-nnnn"
+                   id = "phone" />
+            </p>
+
+            <p>
+            <label>Email address:</label>
+            <input type = "text"
+                   value = "xxxxx@xxxxx.xxx"
+                   id = "email" />
+            </p>
+
+            <p>
+            <label>Academic Level</label>
+
+                   <select name="academic">
+                   <option value="hs">Highschool</option>
+                   <option value="associate">Associate</option>
+                   <option value="bs">Batchelor</option>
+                   <option value="ms">Master</option>
+                   <option value="phD">Doctorate</option>
+                   </select>
+            </p>
+
+            <p>
+            <label>Interest type</label>
+                   <select name="jobFamily">
+                   <option value="adm">Administrative</option>
+                   <option value="fin">Finance & Accounting</option>
+                   <option value="int">Intern</option>
+                   <option value="tech">Technical</option>
+                   </select>
+            </p>
+
+            <p>
+            <label>Work experience</label>
+
+                   <select name="years">
+                   <option value="none">None</option>
+                   <option value="1-5">1-5 years</option>
+                   <option value="6-10">6-10 years</option>
+                   <option value=">10">above 10 yearsl</option>
+
+                   </select>
+
+            <p>
+                <label for="date">Date available:</label>
+                <input type="text"
+                       id = "datePicker" />
+            </p>
+
+            <p>
+                <label for="time">Best time to reach:</label>
+                <input type="text"
+                       id = "timePicker" />
+            </p>
+
+            <p>
+            <label>Jobs of Interest*:</label>
+            <input type = "text"
+                   value = ""
+                   id = "interest" />
+            </p>
+            <label>Ok to contact: </label>
+            <input type = "text" id = "checkbox" />
+            
+            <p>
+            <button type = "button"
+                    value = "Enter"
+                    onclick = "validate()">
+                Enter
+            </button>
+          </p>
+        </fieldset>
+    </form>
+  </div>
+  <div id="tabs-2">
+    <p>With eRecruit, a job seeker can search millions of jobs online to find the best job that suits your criteria. These criteria could start from Job Type (Individual Contributor or Management), Job Title, keywords, Location, to a Salary Range. We have many tools that you can use for job search - company reviews from existing employees. eRecruit is optimized for mobile usage, supports 1 click job apply and helps match job seekers with employers. You can  receive jobs you are interested in based on your job search parameters. eRecruit can help match those seeking jobs with  openings that match their skills and location.</p>
+  </div>
+  <div id="tabs-3">
+    <p>eRecruit can notify you by email whenever new jobs that match your criteria get posted. All you have to do is to Sign up for Job Alerts.
+    Signing up for Job Alerts is easy. Just search for your job and save your search and Click on "Create New Alert" for this critieria. This will notify users of current job opportunities that they may be interested in. Candidates can create Job Alerts by searching with job titles, keywords, company names, and locations.
+    </p>
+  </div>
+<!--  <div id="tabs-4">
+    <h2>
+        <span class = "ui-icon ui-icon-calendar"></span>
+        Available dates/times
+    </h2>
+    <p>
+      <ol id="selectable">
+        <li>October 5th 2018 3pm</li>
+        <li>October 6th 2018 2pm</li>
+        <li>October 15th 2018 2pm</li>
+      </ol>
+    </p>
+
+   <h2>Preferred date</h2>
+   <p>
+      <label>Selected interview date/time</label>
+      <input type="text" id="datePicker" />
+   </p>
+   <h2>Preferred time</h2>
+   <p>
+      <label>Selected interview date/time</label>
+      <input type="text" id="timePicker" />
+   </p>
+  </div>
+-->
+  <div id="tabs-5">
+
+    <div id = "contactUs">
+        <h2>
+            <span class = "ui-icon ui-icon-contact"></span>
+            Resizable Contact form
+
+        </h2>
+        <p>
+
+        Main Phone: (925) 888-8888
+
+        Support: support@techSquad.com
+        Sales:   sales@techSquad.com
+        Finance: finance@techSquad.com
+        HR:      hr@techSqad.com
+
+        Address: Postbox 1, Pleasanton, CA 94566
+
+        </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
